@@ -9,7 +9,7 @@ function App() {
         <h4>software engineer @microsoft | microsoft teams | calling & meetings</h4>
       </header>
       <body>
-        welcome to my personal website. the site is supposed to never be finished!
+        welcome to my personal website. the site will never be finished!
       </body>
     </div>
   );
