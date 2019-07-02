@@ -1,17 +1,18 @@
 import React from 'react';
-import './App.css';
+import './styles.scss';
+import HeaderSection from './header-section';
+import WelcomeSection from './welcome-section';
+// import ReadingSection from './reading-section';
+import FooterSection from './footer-section';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>martin petrla</h1>
-        <h4>software engineer @microsoft | microsoft teams | calling & meetings</h4>
-      </header>
-      <body>
-        welcome to my personal website. the site will never be finished!
-      </body>
-    </div>
+    <>
+      <HeaderSection />
+      <WelcomeSection />
+      {/* <ReadingSection /> */}
+      <FooterSection />
+    </>
   );
 }
 
