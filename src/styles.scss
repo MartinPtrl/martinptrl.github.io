@@ -1,4 +1,6 @@
 $dark-grey: #282c34;
+$pastel-green: #bbfd5f;
+$white: white;
 
 @mixin page-view-mixin {
   min-height: 100vh;
@@ -14,21 +16,31 @@ $dark-grey: #282c34;
   @include page-view-mixin();
 
   &:nth-child(even){
-    background-color: white;
+    background-color: $white;
     color: $dark-grey;  
     
     .icon-wrapper {
       color: $dark-grey;
-    }  
+    }
+
+    &.footer-section .icon-wrapper:hover {
+      color: $white;
+      background-color: $dark-grey;
+      border-radius: .5rem;
+    }
   }
 
   &:nth-child(odd) {
     background-color: $dark-grey;
-    color: white;  
+    color: $white;  
     
     .icon-wrapper {
-      color: white;
-    }   
+      color: $white;
+    }
+
+    &.footer-section .icon-wrapper:hover {
+      color: $pastel-green;
+    }
   }
 }
 
@@ -40,6 +52,6 @@ $dark-grey: #282c34;
 }
 
 .icon-wrapper {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  padding: .5rem 2rem;
+  margin: 0 .3rem;
 }
