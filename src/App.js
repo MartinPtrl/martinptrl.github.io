@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <HeaderSection />
-      <WelcomeSection />
+      {/* <WelcomeSection /> */} 
       {/* <ReadingSection /> */}
-      <FooterSection />
+      {/*<FooterSection /> */}
     </>
   );
 }
