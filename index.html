@@ -1,1 +1,46 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elapsed Time</title>
+    <style>
+      body {
+        font-family: monaco;
+        height: 100vh;
+        text-align: center;
+        align-content: center;
+        background-color: cornflowerblue;
+      }
+      #elapsed-time {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>2025-01-08 - 20:00 CET 🚀</h1>
+    <h2 id="elapsed-time">Loading...</h2>
+
+    <script>
+      const targetDate = new Date("2025-01-08T20:00:00");
+
+      function updateElapsedTime() {
+        const now = new Date();
+        const diff = Math.max(0, now - targetDate);
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        const elapsedTimeText = `${hours} hours ${minutes} minutes and ${seconds} seconds`;
+        document.getElementById("elapsed-time").textContent = elapsedTimeText;
+      }
+
+      // Update every second
+      setInterval(updateElapsedTime, 1000);
+
+      // Initial update
+      updateElapsedTime();
+    </script>
+  </body>
+</html>
